@@ -93,7 +93,7 @@ frontend/
 - [ ] Copy all 8 backend files to correct locations
 - [ ] Update `.env` with your credentials
 - [ ] Run `npm run db:push` to create database tables
-- [ ] Start with `npm run dev` (should run on port 5000)
+- [ ] Start with `npm run dev` (should run on port 8080)
 
 ### Frontend Setup
 - [ ] Create Next.js project with `npx create-next-app`
@@ -105,7 +105,7 @@ frontend/
 - [ ] Start with `npm run dev` (should run on port 3000)
 
 ### Testing
-- [ ] Backend running on `http://localhost:5000`
+- [ ] Backend running on `http://localhost:8080`
 - [ ] Frontend running on `http://localhost:3000`
 - [ ] Contact form appears on `/contact` page
 - [ ] Submit test form and verify:
@@ -245,7 +245,7 @@ All website content can be easily customized:
 
 | Issue | Solution |
 |-------|----------|
-| Port 5000 already in use | Use different port or kill existing process |
+| Port 8080 already in use | Use different port or kill existing process |
 | Database connection fails | Verify DATABASE_URL format and credentials |
 | Emails not sending | Check Gmail App Password (16 chars, no spaces) |
 | CORS errors | Update FRONTEND_URL in backend .env |

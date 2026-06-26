@@ -41,7 +41,7 @@ That's it! 🎉
 DATABASE_URL=postgresql://user:password@host:5432/database
 EMAIL_USER=sales@zalgoinfotech.com
 EMAIL_PASSWORD=your_gmail_app_password
-PORT=5000
+PORT=8080
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
 ```
@@ -54,7 +54,7 @@ FRONTEND_URL=http://localhost:3000
 
 ### Frontend Setup (frontend/.env.local)
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
+NEXT_PUBLIC_API_URL=http://localhost:8080/api
 ```
 
 ---
@@ -161,7 +161,7 @@ npm run build
 
 | Issue | Solution |
 |-------|----------|
-| Port 5000 in use | `lsof -i :5000` then `kill -9 <PID>` |
+| Port 8080 in use | `lsof -i :8080` then `kill -9 <PID>` |
 | DB connection error | Check DATABASE_URL format and credentials |
 | Emails not sending | Verify Gmail App Password (16 chars) |
 | CORS errors | Check FRONTEND_URL in backend .env |

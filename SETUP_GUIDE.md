@@ -92,7 +92,7 @@ mkdir -p src/db src/services src/routes
 DATABASE_URL=postgresql://user:password@hostname/database_name
 EMAIL_USER=sales@zalgoinfotech.com
 EMAIL_PASSWORD=your_gmail_app_password
-PORT=5000
+PORT=8080
 NODE_ENV=development
 FRONTEND_URL=http://localhost:3000
 ```
@@ -111,7 +111,7 @@ This creates the `contacts` table in your PostgreSQL database.
 npm run dev
 ```
 
-Server will run on `http://localhost:5000`
+Server will run on `http://localhost:8080`
 
 ✅ **Backend is ready!**
 
@@ -164,7 +164,7 @@ mkdir -p components lib
 
 ### Step 5: Update .env.local
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:5000/api
+NEXT_PUBLIC_API_URL=http://localhost:8080/api
 ```
 
 For production, change to your backend URL:
@@ -254,7 +254,7 @@ postgresql://username:password@ep-xyz.us-east-1.neon.tech/dbname?sslmode=require
    DATABASE_URL=your_neon_url
    EMAIL_USER=sales@zalgoinfotech.com
    EMAIL_PASSWORD=your_gmail_app_password
-   PORT=5000
+   PORT=8080
    NODE_ENV=production
    FRONTEND_URL=https://your-frontend.vercel.app
    ```
@@ -299,7 +299,7 @@ postgresql://username:password@ep-xyz.us-east-1.neon.tech/dbname?sslmode=require
 ## 🐛 Troubleshooting
 
 ### Backend won't start
-- Check if port 5000 is in use
+- Check if port 8080 is in use
 - Verify DATABASE_URL is correct
 - Ensure all dependencies are installed
 
