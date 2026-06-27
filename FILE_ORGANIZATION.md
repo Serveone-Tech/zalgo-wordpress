@@ -109,7 +109,7 @@ frontend/
 - [ ] Frontend running on `http://localhost:3000`
 - [ ] Contact form appears on `/contact` page
 - [ ] Submit test form and verify:
-  - [ ] Email received at sales@zalgoinfotech.com
+  - [ ] Email received at sales@zalgoinfotech.in
   - [ ] Confirmation email sent to test email
   - [ ] Entry created in database
 
@@ -154,7 +154,7 @@ frontend/
 ## 📧 Email Configuration
 
 **Contact Form Emails:**
-- Send to: `sales@zalgoinfotech.com`
+- Send to: `sales@zalgoinfotech.in`
 - Template: Professional HTML with form details
 - Confirmation: Auto-reply to user's email
 
@@ -221,7 +221,7 @@ All components use Tailwind's responsive utilities (sm:, md:, lg:)
 ## 📞 Support Information
 
 **For Zalgo Infotech Contact:**
-- Email: `sales@zalgoinfotech.com`
+- Email: `sales@zalgoinfotech.in`
 - Phone: Update in footer.tsx
 - Address: Update in footer.tsx
 - Business Hours: Update in contact page

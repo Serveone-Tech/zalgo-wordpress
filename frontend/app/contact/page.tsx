@@ -178,8 +178,8 @@ const contactMethods = [
       </svg>
     ),
     label: "Email Us",
-    value: "sales@zalgoinfotech.com",
-    href: "mailto:sales@zalgoinfotech.com",
+    value: "sales@zalgoinfotech.in",
+    href: "mailto:sales@zalgoinfotech.in",
   },
   {
     icon: (
@@ -246,7 +246,7 @@ const contactMethods = [
     ),
     label: "Business Hours",
     value: "Mon – Sat: 10 AM – 8 PM IST",
-    href: "mailto:sales@zalgoinfotech.com",
+    href: "mailto:sales@zalgoinfotech.in",
   },
 ];
 
@@ -539,7 +539,7 @@ export default function Contact() {
             <p className="text-gray-400 text-sm">
               Still have questions?{" "}
               <Link
-                href="mailto:sales@zalgoinfotech.com"
+                href="mailto:sales@zalgoinfotech.in"
                 className="text-teal-400 hover:text-teal-300 font-semibold transition-colors"
               >
                 Email us directly →

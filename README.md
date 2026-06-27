@@ -28,7 +28,7 @@ npm run dev
 **Then:**
 1. Go to `http://localhost:3000/contact`
 2. Fill out the contact form
-3. Check `sales@zalgoinfotech.com` for the submission
+3. Check `sales@zalgoinfotech.in` for the submission
 
 That's it! 🎉
 
@@ -39,7 +39,7 @@ That's it! 🎉
 ### Backend Setup (backend/.env)
 ```env
 DATABASE_URL=postgresql://user:password@host:5432/database
-EMAIL_USER=sales@zalgoinfotech.com
+EMAIL_USER=sales@zalgoinfotech.in
 EMAIL_PASSWORD=your_gmail_app_password
 PORT=8080
 NODE_ENV=development
@@ -111,7 +111,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8080/api
 3. Sends to backend API
 4. Backend validates again
 5. Saves to PostgreSQL database
-6. Sends email to office (`sales@zalgoinfotech.com`)
+6. Sends email to office (`sales@zalgoinfotech.in`)
 7. Sends confirmation to user
 8. Returns success response
 
@@ -206,7 +206,7 @@ Edit CSS variables in `frontend/app/globals.css`:
 ```
 
 ### Update Company Info
-- Email: Search for `sales@zalgoinfotech.com` and replace
+- Email: Search for `sales@zalgoinfotech.in` and replace
 - Phone: Update in Footer component
 - Address: Update in Footer component
 

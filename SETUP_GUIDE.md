@@ -90,7 +90,7 @@ mkdir -p src/db src/services src/routes
 ### Step 5: Update .env File
 ```env
 DATABASE_URL=postgresql://user:password@hostname/database_name
-EMAIL_USER=sales@zalgoinfotech.com
+EMAIL_USER=sales@zalgoinfotech.in
 EMAIL_PASSWORD=your_gmail_app_password
 PORT=8080
 NODE_ENV=development
@@ -197,7 +197,7 @@ Frontend will run on `http://localhost:3000`
 
 4. Check results:
    - ✅ Form submission success message
-   - ✅ Check `sales@zalgoinfotech.com` inbox for the submission
+   - ✅ Check `sales@zalgoinfotech.in` inbox for the submission
    - ✅ Check your email for confirmation message
    - ✅ Verify entry in database (check Neon console)
 
@@ -252,7 +252,7 @@ postgresql://username:password@ep-xyz.us-east-1.neon.tech/dbname?sslmode=require
 4. Add environment variables:
    ```
    DATABASE_URL=your_neon_url
-   EMAIL_USER=sales@zalgoinfotech.com
+   EMAIL_USER=sales@zalgoinfotech.in
    EMAIL_PASSWORD=your_gmail_app_password
    PORT=8080
    NODE_ENV=production
@@ -274,7 +274,7 @@ postgresql://username:password@ep-xyz.us-east-1.neon.tech/dbname?sslmode=require
 ## 📝 Important Notes
 
 ### Email Configuration
-- Contact form emails are sent to: `sales@zalgoinfotech.com`
+- Contact form emails are sent to: `sales@zalgoinfotech.in`
 - Users receive automatic confirmation emails
 - Requires Gmail App Password (not your main password)
 
@@ -324,7 +324,7 @@ postgresql://username:password@ep-xyz.us-east-1.neon.tech/dbname?sslmode=require
 ## 📞 Support & Contact Info
 
 For updates to the website:
-- Email: sales@zalgoinfotech.com
+- Email: sales@zalgoinfotech.in
 - Website pages can be edited in `app/` directory
 - Services/testimonials content can be updated in respective page files
 

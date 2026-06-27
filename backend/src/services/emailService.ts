@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER || 'sales@zalgoinfotech.com',
+    user: process.env.EMAIL_USER || 'sales@zalgoinfotech.in',
     pass: process.env.EMAIL_PASSWORD, // Gmail App Password
   },
 });
@@ -100,7 +100,7 @@ export async function sendContactEmail(data: EmailParams): Promise<void> {
     </div>
 
     <!-- Footer -->
-    <p style="margin:20px 0 0;color:#4b5563;font-size:12px;text-align:center">Zalgo Infotech · sales@zalgoinfotech.com · +91 92442 13326</p>
+    <p style="margin:20px 0 0;color:#4b5563;font-size:12px;text-align:center">Zalgo Infotech · sales@zalgoinfotech.in · +91 92442 13326</p>
   </td></tr>
 
 </table>
@@ -110,8 +110,8 @@ export async function sendContactEmail(data: EmailParams): Promise<void> {
 </html>`;
 
     await transporter.sendMail({
-      from: `"Zalgo Infotech" <${process.env.EMAIL_USER || 'sales@zalgoinfotech.com'}>`,
-      to: 'sales@zalgoinfotech.com',
+      from: `"Zalgo Infotech" <${process.env.EMAIL_USER || 'sales@zalgoinfotech.in'}>`,
+      to: 'sales@zalgoinfotech.in',
       subject: `🔔 New Lead: ${data.name} — Zalgo Infotech`,
       html: officeHtml,
       replyTo: data.email,
@@ -195,7 +195,7 @@ export async function sendContactEmail(data: EmailParams): Promise<void> {
 
     <!-- CTA button -->
     <div style="text-align:center;margin-bottom:28px">
-      <a href="https://zalgoinfotech.com/portfolio" style="display:inline-block;background:linear-gradient(135deg,#0d9488,#0891b2);color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:14px 32px;border-radius:8px">
+      <a href="https://zalgoinfotech.in/portfolio" style="display:inline-block;background:linear-gradient(135deg,#0d9488,#0891b2);color:#fff;text-decoration:none;font-size:14px;font-weight:700;padding:14px 32px;border-radius:8px">
         View Our Portfolio →
       </a>
     </div>
@@ -209,7 +209,7 @@ export async function sendContactEmail(data: EmailParams): Promise<void> {
           <p style="margin:2px 0 0;color:#9ca3af;font-size:12px">WordPress Experts Since 2016</p>
         </td>
         <td align="right">
-          <p style="margin:0;color:#9ca3af;font-size:12px">sales@zalgoinfotech.com</p>
+          <p style="margin:0;color:#9ca3af;font-size:12px">sales@zalgoinfotech.in</p>
           <p style="margin:2px 0 0;color:#9ca3af;font-size:12px">+91 92442 13326</p>
         </td>
       </tr>
@@ -217,7 +217,7 @@ export async function sendContactEmail(data: EmailParams): Promise<void> {
   </td></tr>
 
   <tr><td style="padding:16px;text-align:center">
-    <p style="margin:0;color:#9ca3af;font-size:11px">You received this email because you submitted a contact form at zalgoinfotech.com</p>
+    <p style="margin:0;color:#9ca3af;font-size:11px">You received this email because you submitted a contact form at zalgoinfotech.in</p>
   </td></tr>
 
 </table>
@@ -227,7 +227,7 @@ export async function sendContactEmail(data: EmailParams): Promise<void> {
 </html>`;
 
     await transporter.sendMail({
-      from: `"Zalgo Infotech" <${process.env.EMAIL_USER || 'sales@zalgoinfotech.com'}>`,
+      from: `"Zalgo Infotech" <${process.env.EMAIL_USER || 'sales@zalgoinfotech.in'}>`,
       to: data.email,
       subject: `We received your message, ${escapeHtml(data.name)} — Zalgo Infotech`,
       html: clientHtml,
@@ -276,8 +276,8 @@ export async function sendPlanInquiryEmail(data: PlanEmailParams): Promise<void>
     `;
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'sales@zalgoinfotech.com',
-      to: 'sales@zalgoinfotech.com',
+      from: process.env.EMAIL_USER || 'sales@zalgoinfotech.in',
+      to: 'sales@zalgoinfotech.in',
       subject: `New Plan Inquiry: ${data.plan} — ${data.name}`,
       html: officeHtml,
       replyTo: data.email,
@@ -305,7 +305,7 @@ export async function sendPlanInquiryEmail(data: PlanEmailParams): Promise<void>
     `;
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER || 'sales@zalgoinfotech.com',
+      from: process.env.EMAIL_USER || 'sales@zalgoinfotech.in',
       to: data.email,
       subject: `Your ${data.plan} inquiry — Zalgo Infotech`,
       html: userHtml,

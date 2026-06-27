@@ -164,7 +164,7 @@ export default function CaseStudyPage({ params }: { params: { slug: string } }) 
               <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
               <span className="w-3 h-3 rounded-full bg-green-500/80" />
               <div className="ml-3 flex-1 bg-gray-700/60 rounded px-3 py-1 text-xs text-gray-400 truncate">
-                {cs.url && cs.url !== '#' ? cs.url : 'zalgoinfotech.com'}
+                {cs.url && cs.url !== '#' ? cs.url : 'zalgoinfotech.in'}
               </div>
             </div>
             <div className="relative w-full" style={{ aspectRatio: '16/9' }}>

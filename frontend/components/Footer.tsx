@@ -79,10 +79,10 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="mailto:sales@zalgoinfotech.com"
+                  href="mailto:sales@zalgoinfotech.in"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  sales@zalgoinfotech.com
+                  sales@zalgoinfotech.in
                 </a>
               </li>
               <li>
