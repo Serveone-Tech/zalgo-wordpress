@@ -27,6 +27,19 @@ const testimonials: {
 }[] = [
   // ── Clutch / GoodFirms ──
   {
+    name: 'Milissa Wise',
+    company: 'Expert Heavy Equipment Inc.',
+    role: 'Owner',
+    content: "We're impressed with their turnaround time and availability. The website's performance has improved since Zalgo Infotech PVT LTD started their work. The team has delivered on time, and we have communicated with them via email and messaging apps. Overall, we are very pleased with their turnaround time and availability.",
+    rating: 5,
+    ratingDisplay: '5.0',
+    initials: 'MW',
+    color: 'from-orange-500 to-orange-700',
+    project: 'Web Development',
+    platform: 'Clutch',
+    period: 'May 2020 — Ongoing',
+  },
+  {
     name: 'Linda MT',
     company: 'BIOAGE Inc.',
     role: 'Co-Owner',
@@ -280,20 +293,60 @@ export default function Testimonials() {
           </p>
           {/* Platform trust strip */}
           <div className="flex flex-wrap items-center justify-center gap-4 animate-fade-in-up">
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-red-500/10 border border-red-500/25">
+            <a href="https://clutch.co/profile/zalgo-infotech#reviews" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-red-500/10 border border-red-500/25 hover:bg-red-500/20 hover:border-red-500/50 transition-all">
               <ClutchIcon className="w-5 h-5 text-red-400" />
               <span className="text-red-400 font-bold text-sm">Clutch</span>
               <span className="text-gray-500 text-xs">3 Reviews · 5.0★</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-blue-500/10 border border-blue-500/25">
-              <GoodFirmsIcon className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-bold text-sm">GoodFirms</span>
+            </a>
+            <a href="https://www.goodfirms.co/company/zalgo-infotech-pvt-ltd" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-yellow-500/10 border border-yellow-600/30 hover:bg-yellow-500/20 hover:border-yellow-500/50 transition-all">
+              <GoodFirmsIcon className="w-5 h-5" />
+              <span className="text-yellow-500 font-bold text-sm">GoodFirms</span>
               <span className="text-gray-500 text-xs">Verified · 5.0★</span>
-            </div>
-            <div className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-green-500/10 border border-green-500/25">
+            </a>
+            <a href="https://www.upwork.com/freelancers/~011583492a8754a6a8?viewMode=1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-4 py-2.5 rounded-full bg-green-500/10 border border-green-500/25 hover:bg-green-500/20 hover:border-green-500/50 transition-all">
               <UpworkIcon className="w-5 h-5 text-green-400" />
               <span className="text-green-400 font-bold text-sm">Upwork</span>
               <span className="text-gray-500 text-xs">10 Reviews · 5.0★</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonial — Roland Thomas */}
+      <section className="pb-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="h-px flex-1 bg-gray-800" />
+            <div className="flex items-center gap-2">
+              <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              <span className="text-red-400 font-bold text-sm">Video Testimonial</span>
+              <span className="text-gray-500 text-xs ml-1">— Roland Thomas, CEO, BIOAGE Inc.</span>
+            </div>
+            <div className="h-px flex-1 bg-gray-800" />
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <div className="relative rounded-2xl overflow-hidden border border-gray-700 bg-gray-900 shadow-2xl shadow-red-500/10" style={{ aspectRatio: '16/9' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/TxjsRFwDvbQ?rel=0"
+                title="Roland Thomas — BIOAGE Inc. Video Testimonial"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+            <div className="mt-4 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-red-500 to-red-700 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">RT</div>
+                <div>
+                  <p className="text-white font-bold text-sm">Roland Thomas</p>
+                  <p className="text-gray-500 text-xs">CEO, BIOAGE Inc. &nbsp;·&nbsp; 6+ Year Client</p>
+                </div>
+              </div>
+              <a href="https://www.youtube.com/watch?v=TxjsRFwDvbQ" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/25 hover:bg-red-500/20 transition-all text-red-400 text-xs font-semibold">
+                <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch on YouTube
+              </a>
             </div>
           </div>
         </div>
@@ -308,8 +361,8 @@ export default function Testimonials() {
               <ClutchIcon className="w-5 h-5 text-red-400" />
               <span className="text-red-400 font-bold text-sm">Clutch</span>
               <span className="text-gray-600 text-xs mx-1">&amp;</span>
-              <GoodFirmsIcon className="w-5 h-5 text-blue-400" />
-              <span className="text-blue-400 font-bold text-sm">GoodFirms</span>
+              <GoodFirmsIcon className="w-5 h-5" />
+              <span className="text-yellow-500 font-bold text-sm">GoodFirms</span>
               <span className="text-gray-500 text-xs ml-1">— Verified Reviews</span>
             </div>
             <div className="h-px flex-1 bg-gray-800" />

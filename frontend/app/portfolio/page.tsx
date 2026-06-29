@@ -229,77 +229,76 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
         ${inView ? 'animate-fade-in-up' : 'opacity-0'}`}
       style={{ animationDelay: `${(index % 2) * 0.15}s` }}
     >
-      {/* Image */}
-      <div className="relative h-60 overflow-hidden bg-gray-900 flex-shrink-0 flex items-center justify-center">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          className="object-contain group-hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute top-4 left-4 z-10">
-          <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-xs font-semibold border border-white/20">
-            {project.category}
-          </span>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="p-6 flex flex-col flex-1">
-        {/* Meta row */}
-        <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4">
-          <span className="flex items-center gap-1">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
-            {project.client}
-          </span>
-          <span className="w-1 h-1 bg-gray-700 rounded-full" />
-          <span className="flex items-center gap-1">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
-            {project.category}
-          </span>
-          <span className="w-1 h-1 bg-gray-700 rounded-full" />
-          <span className="flex items-center gap-1">
-            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            {project.duration}
-          </span>
-        </div>
-
-        <h3 className="text-lg font-extrabold text-white mb-2 leading-snug group-hover:text-teal-400 transition-colors">
-          {project.title}
-        </h3>
-
-        <div className="flex items-center gap-1.5 mb-3">
-          <svg className="w-3.5 h-3.5 text-teal-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
-          </svg>
-          <span className="text-teal-400 text-xs font-semibold">{project.subtitle}</span>
-        </div>
-
-        <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{project.description}</p>
-
-        {/* Tech Stack */}
-        <div className="mb-5">
-          <p className="text-xs font-bold text-white mb-2">Tech Stack:</p>
-          <div className="flex flex-wrap gap-1.5">
-            {project.tech.map((t, i) => (
-              <span key={i} className="text-xs px-2.5 py-1 rounded-full border border-teal-500/30 bg-teal-500/8 text-teal-300">{t}</span>
-            ))}
+      <Link href={`/portfolio/${project.slug}`} className="flex flex-col flex-1">
+        {/* Image */}
+        <div className="relative h-60 overflow-hidden bg-gray-900 flex-shrink-0 flex items-center justify-center">
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-contain group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent pointer-events-none" />
+          <div className="absolute top-4 left-4 z-10">
+            <span className="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-white text-xs font-semibold border border-white/20">
+              {project.category}
+            </span>
           </div>
         </div>
 
-        {/* CTA */}
-        <Link
-          href={`/portfolio/${project.slug}`}
-          className="inline-flex items-center gap-3 text-white font-bold text-xs group/link w-fit mt-auto"
-        >
-          <span className="uppercase tracking-widest">View Case Study</span>
-          <div className="h-px w-10 bg-teal-500 group-hover/link:w-16 transition-all duration-300" />
-          <svg className="w-3.5 h-3.5 text-teal-400 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
-        </Link>
-      </div>
+        {/* Content */}
+        <div className="p-6 flex flex-col flex-1">
+          {/* Meta row */}
+          <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-4">
+            <span className="flex items-center gap-1">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+              {project.client}
+            </span>
+            <span className="w-1 h-1 bg-gray-700 rounded-full" />
+            <span className="flex items-center gap-1">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+              {project.category}
+            </span>
+            <span className="w-1 h-1 bg-gray-700 rounded-full" />
+            <span className="flex items-center gap-1">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              {project.duration}
+            </span>
+          </div>
+
+          <h3 className="text-lg font-extrabold text-white mb-2 leading-snug group-hover:text-teal-400 transition-colors">
+            {project.title}
+          </h3>
+
+          <div className="flex items-center gap-1.5 mb-3">
+            <svg className="w-3.5 h-3.5 text-teal-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-teal-400 text-xs font-semibold">{project.subtitle}</span>
+          </div>
+
+          <p className="text-gray-400 text-sm leading-relaxed mb-5 flex-1">{project.description}</p>
+
+          {/* Tech Stack */}
+          <div className="mb-5">
+            <p className="text-xs font-bold text-white mb-2">Tech Stack:</p>
+            <div className="flex flex-wrap gap-1.5">
+              {project.tech.map((t, i) => (
+                <span key={i} className="text-xs px-2.5 py-1 rounded-full border border-teal-500/30 bg-teal-500/8 text-teal-300">{t}</span>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="inline-flex items-center gap-3 text-white font-bold text-xs w-fit mt-auto">
+            <span className="uppercase tracking-widest">View Case Study</span>
+            <div className="h-px w-10 bg-teal-500 group-hover:w-16 transition-all duration-300" />
+            <svg className="w-3.5 h-3.5 text-teal-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }
@@ -347,7 +346,7 @@ export default function Portfolio() {
             </span>
           </div>
 
-          <div className="group rounded-3xl border border-gray-700 bg-gray-900/60 overflow-hidden hover:border-teal-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/10">
+          <Link href="/portfolio/bioage" className="group rounded-3xl border border-gray-700 bg-gray-900/60 overflow-hidden hover:border-teal-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-teal-500/10 block">
             <div className="grid grid-cols-1 lg:grid-cols-2">
 
               {/* Left: Image */}
@@ -419,19 +418,16 @@ export default function Portfolio() {
                 </div>
 
                 {/* CTA */}
-                <Link
-                  href="/portfolio/bioage"
-                  className="inline-flex items-center gap-3 text-white font-bold text-sm group/link w-fit"
-                >
+                <div className="inline-flex items-center gap-3 text-white font-bold text-sm w-fit">
                   <span className="uppercase tracking-widest text-xs">View Case Study</span>
-                  <div className="flex-1 h-px w-12 bg-teal-500 group-hover/link:w-20 transition-all duration-300" />
-                  <svg className="w-4 h-4 text-teal-400 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex-1 h-px w-12 bg-teal-500 group-hover:w-20 transition-all duration-300" />
+                  <svg className="w-4 h-4 text-teal-400 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 

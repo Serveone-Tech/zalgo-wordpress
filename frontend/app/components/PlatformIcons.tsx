@@ -11,12 +11,16 @@ export function ClutchIcon({ className }: { className?: string }) {
 
 export function GoodFirmsIcon({ className }: { className?: string }) {
   return (
-    <svg className={className} viewBox="0 0 24 24">
-      <circle cx="12" cy="12" r="12" fill="currentColor"/>
-      <g fill="none" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M16.5 9A6 6 0 1 0 16.5 15"/>
-        <path d="M16.5 12H12"/>
-      </g>
+    <svg className={className} viewBox="0 0 26 30" fill="none">
+      <path d="M3.5 25.4l4.7 3.4a8.5 8.5 0 0 0 10 0l4.7-3.4C25 23.8 26.4 21.3 26.4 18.6V2.7C26.4 1.2 25.1 0 23.6.1l-2.1.2a62 62 0 0 1-16.5 0L2.8 0A2.7 2.7 0 0 0 0 2.7v15.9c0 2.7 1.3 5.3 3.5 6.8z" fill="url(#gf-grad)"/>
+      <path d="M18.7 12.1l-2.4 2.4.6 3.4c0 .1 0 .3-.2.4a.4.4 0 0 1-.4 0l-3-1.6-3 1.6a.4.4 0 0 1-.4 0c-.1-.1-.2-.3-.2-.4l.6-3.4-2.5-2.4c-.1-.1-.1-.3-.1-.4s.2-.2.3-.3l3.4-.5 1.5-3.1c.1-.3.6-.3.7 0l1.5 3.1 3.4.5c.1 0 .3.1.3.3 0 .1 0 .3-.1.4z" fill="#fff"/>
+      <defs>
+        <linearGradient id="gf-grad" x1="0" y1="15" x2="26.4" y2="15" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#dcb45a"/>
+          <stop offset=".5" stopColor="#a37d2b"/>
+          <stop offset="1" stopColor="#d0a853"/>
+        </linearGradient>
+      </defs>
     </svg>
   );
 }
@@ -39,7 +43,7 @@ export function PlatformBadge({ platform }: { platform: Platform }) {
     </span>
   );
   if (platform === 'GoodFirms') return (
-    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/12 border border-blue-500/25 text-blue-400 text-[10px] font-bold">
+    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-yellow-500/10 border border-yellow-600/30 text-yellow-500 text-[10px] font-bold">
       <GoodFirmsIcon className="w-3.5 h-3.5" />
       GoodFirms
     </span>
