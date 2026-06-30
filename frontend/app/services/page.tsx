@@ -258,141 +258,60 @@ export default function Services() {
     <div className="bg-gray-950 overflow-x-hidden">
 
       {/* ── HERO ── */}
-      <section className="relative py-20 lg:py-28 overflow-hidden">
+      <section className="relative py-28 lg:py-36 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/6 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-500/6 rounded-full blur-3xl" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-teal-500/8 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-blue-500/8 rounded-full blur-3xl" />
           <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(0,153,153,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0,153,153,0.03) 1px, transparent 1px)',
-            backgroundSize: '50px 50px',
+            backgroundImage: 'radial-gradient(rgba(0,153,153,0.04) 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
           }} />
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
-            {/* Left content */}
-            <div className="animate-fade-in-up">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-teal-500/30 bg-teal-500/5 text-teal-400 text-xs font-semibold uppercase tracking-widest mb-6">
-                <div className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse" />
-                WordPress Maintenance Experts
-              </div>
-
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-5">
-                WordPress &amp; <span className="text-teal-400">WooCommerce</span> Maintenance Services
-              </h1>
-
-              <p className="text-lg text-gray-400 mb-8 leading-relaxed">
-                Keep Your Website Secure, Fast &amp; Updated Without Hiring an In-House Developer.
-              </p>
-
-              <div className="space-y-3 mb-10">
-                {[
-                  '10+ Year Client Relationships',
-                  'WooCommerce Specialists',
-                  'Security & Performance Monitoring',
-                  'Ongoing Technical Support',
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-5 h-5 rounded-full bg-teal-500/20 border border-teal-500/40 flex items-center justify-center flex-shrink-0">
-                      <svg className="w-3 h-3 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <span className="text-gray-300">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/contact" className="group inline-flex items-center gap-2 px-7 py-4 rounded-xl bg-teal-600 text-white font-bold hover:bg-teal-500 transition-all hover:shadow-xl hover:shadow-teal-500/30">
-                  Get Free Website Audit
-                  <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-                <Link href="/portfolio" className="inline-flex items-center gap-2 px-7 py-4 rounded-xl border border-gray-700 text-gray-300 font-bold hover:border-teal-500 hover:text-white transition-all">
-                  View Case Studies
-                </Link>
-              </div>
-            </div>
-
-            {/* Right: Dashboard mockup */}
-            <div className="relative animate-slide-in-right hidden lg:block">
-              <div className="absolute -inset-4 bg-teal-500/8 rounded-3xl blur-2xl" />
-              <div className="relative bg-gray-900 rounded-2xl border border-gray-700 shadow-2xl overflow-hidden p-6">
-                {/* Browser bar */}
-                <div className="flex items-center gap-2 mb-5 pb-4 border-b border-gray-800">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                  <div className="w-3 h-3 rounded-full bg-green-500" />
-                  <div className="flex-1 mx-4 bg-gray-800 rounded-lg px-3 py-1 text-gray-500 text-xs">yourwebsite.com</div>
-                </div>
-
-                <p className="text-gray-400 text-xs font-semibold uppercase tracking-widest mb-4">Your Website Status</p>
-
-                <div className="grid grid-cols-2 gap-4">
-                  {[
-                    { label: 'Uptime', value: '99.9%', icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>, iconBg: 'bg-green-500/15 border-green-500/25 text-green-400', color: 'text-green-400', status: 'Excellent' },
-                    { label: 'Security', value: 'Protected', icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>, iconBg: 'bg-teal-500/15 border-teal-500/25 text-teal-400', color: 'text-teal-400', status: 'No Threats Found' },
-                    { label: 'Backups', value: 'Weekly', icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" /></svg>, iconBg: 'bg-blue-500/15 border-blue-500/25 text-blue-400', color: 'text-blue-400', status: 'Last: 2 days ago' },
-                    { label: 'WooCommerce', value: 'Healthy', icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>, iconBg: 'bg-purple-500/15 border-purple-500/25 text-purple-400', color: 'text-purple-400', status: 'All systems OK' },
-                  ].map((item, i) => (
-                    <div key={i} className="bg-gray-800/60 rounded-xl p-4 border border-gray-700">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-gray-500 text-xs">{item.label}</span>
-                        <div className={`w-7 h-7 rounded-lg border flex items-center justify-center ${item.iconBg}`}>{item.icon}</div>
-                      </div>
-                      <div className={`text-lg font-bold ${item.color}`}>{item.value}</div>
-                      <div className="text-gray-600 text-xs mt-1">{item.status}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Animated pulse */}
-                <div className="mt-4 flex items-center gap-2 p-3 rounded-xl bg-teal-500/10 border border-teal-500/20">
-                  <div className="w-2 h-2 bg-teal-400 rounded-full animate-pulse" />
-                  <span className="text-teal-400 text-xs font-medium">Active monitoring — all systems healthy</span>
-                </div>
-              </div>
-            </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-teal-500/30 bg-teal-500/5 text-teal-400 text-xs font-semibold uppercase tracking-widest mb-8 animate-fade-in-down">
+            <div className="w-1.5 h-1.5 bg-teal-400 rounded-full animate-pulse" />
+            WordPress Experts Since 2016
           </div>
-        </div>
-      </section>
 
-      {/* ── STATS ── */}
-      <section className="py-12 bg-gray-900/60 border-y border-gray-800">
-        <div ref={statsRef.ref} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-6 animate-fade-in-up">
+            WordPress Services<br />
+            <span className="shimmer-text">Built to Grow</span> Your Business
+          </h1>
+
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed">
+            From custom development to ongoing maintenance — we handle every aspect of your WordPress website so you can focus on your business.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up mb-14">
+            <Link href="/contact" className="group inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-teal-600 text-white font-bold hover:bg-teal-500 transition-all hover:shadow-xl hover:shadow-teal-500/30">
+              Get Free Website Audit
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            <Link href="/portfolio" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl border border-gray-700 text-gray-300 font-bold hover:border-teal-500 hover:text-white transition-all">
+              View Our Work
+            </Link>
+          </div>
+
+          {/* Trust strip */}
+          <div className="flex flex-wrap items-center justify-center gap-6 animate-fade-in-up">
             {[
-              {
-                prefix: '', value: 10, suffix: '+', label: 'Years Experience',
-                icon: <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>,
-              },
-              {
-                prefix: '', value: 100, suffix: '+', label: 'Projects Delivered',
-                icon: <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>,
-              },
-              {
-                prefix: '', value: 80, suffix: '+', label: 'Happy Clients',
-                icon: <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>,
-              },
-              {
-                prefix: '', value: 4, suffix: '.8★', label: 'Overall Rating',
-                icon: <svg className="w-8 h-8 text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>,
-              },
+              { value: '100+', label: 'Projects Delivered' },
+              { value: '10+', label: 'Years Experience' },
+              { value: '4.8★', label: 'Average Rating' },
+              { value: '99.9%', label: 'Client Uptime' },
             ].map((s, i) => (
-              <div key={i} className={`text-center flex flex-col items-center ${statsRef.inView ? 'animate-scale-in' : 'opacity-0'}`} style={{ animationDelay: `${i * 0.15}s` }}>
-                <div className="flex justify-center mb-3">{s.icon}</div>
-                <div className="text-4xl lg:text-5xl font-extrabold text-teal-400 mb-1 whitespace-nowrap">
-                  {statsRef.inView && <AnimatedCounter end={s.value} prefix={s.prefix} suffix={s.suffix} />}
-                </div>
-                <p className="text-gray-400 text-sm leading-tight">{s.label}</p>
+              <div key={i} className="flex flex-col items-center px-6 py-3 rounded-2xl bg-gray-900/60 border border-gray-800">
+                <span className="text-2xl font-extrabold text-teal-400">{s.value}</span>
+                <span className="text-gray-500 text-xs mt-0.5">{s.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* ── ALL SERVICES GRID ── */}
       <section className="py-24 bg-gray-950">

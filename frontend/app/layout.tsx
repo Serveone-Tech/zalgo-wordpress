@@ -1,6 +1,9 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
+import { Suspense } from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import AnalyticsTracker from '@/components/AnalyticsTracker';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -29,6 +32,22 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-gray-950 text-white antialiased">
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SC5HXW055T"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-SC5HXW055T');
+          `}
+        </Script>
+        <Suspense fallback={null}>
+          <AnalyticsTracker />
+        </Suspense>
         <Navigation />
         <main className="min-h-[calc(100vh-64px-400px)]">
           {children}
